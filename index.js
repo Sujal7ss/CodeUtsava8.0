@@ -26,7 +26,7 @@ const leftCloud = document.getElementById('leftCloud');
 const rightCloud = document.getElementById('rightCloud');
 const mainContent = document.getElementById('main-content');
 
-introButton.addEventListener('click', function() {
+function loadContents(){
   cloudsContainer.classList.add('show');
   setTimeout(() => {
     mainContent.style.display = 'block';
@@ -49,5 +49,15 @@ introButton.addEventListener('click', function() {
   // setTimeout(() => {
   //   introScreen.style.display = 'none'; 
   // }, 0); 
+}
+
+introButton.addEventListener('click' || 'keydown', function() {
+  loadContents();
  
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    loadContents();
+  }
 });
